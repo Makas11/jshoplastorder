@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="administrator">
+	<name>Shop Last Order</name>
+	<author>Makas</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>Copyright (C) 2013 Makas. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>andrea@makas.it</authorEmail>
+	<authorUrl>www.makas.it</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_JSHOP_LASTORDER_XML_DESCRIPTION</description>
+  <languages>
+		<language tag="en-GB">languages/en-GB/en-GB.mod_jshoplastorder.ini</language>
+    <language tag="it-IT">languages/it-IT/it-IT.mod_jshoplastorder.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_jshoplastorder">mod_jshoplastorder.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+  <config>
+		<fields name="params">
+			<fieldset name="basic">
+        <field name="status" type="sql" default="" label="MOD_JSHOP_VISIBLE_STATUS_LABEL" description="MOD_JSHOP_VISIBLE_STATUS_DESCRIPTION" query="SELECT status_id, `name_en-GB` AS status FROM #__jshopping_order_status" key_field="status_id" value_field="status" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>
